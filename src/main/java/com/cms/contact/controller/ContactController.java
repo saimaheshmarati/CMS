@@ -1,8 +1,8 @@
 package com.cms.contact.controller;
-package com.cms.controller;
 
-import com.cms.entity.Contact;
-import com.cms.service.ContactService;
+
+import com.cms.contact.entity.Contact;
+import com.cms.contact.Service.ContactService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/contacts")
 @CrossOrigin(origins = "http://localhost:3000")   // React dev server
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class ContactController {
 
-    private final ContactService contactService;
+    private ContactService contactService;
 
     
     @PostMapping
