@@ -1,9 +1,9 @@
 package com.cms.contact.Service;
 
-import com.cms.entity.Contact;
-import com.cms.exception.ContactNotFoundException;
-import com.cms.exception.DuplicateEmailException;
-import com.cms.repository.ContactRepository;
+import com.cms.contact.entity.Contact;
+import com.cms.contact.exception.ContactNotFoundException;
+import com.cms.contact.exception.DuplicateEmailException;
+import com.cms.contact.repository.ContactRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
