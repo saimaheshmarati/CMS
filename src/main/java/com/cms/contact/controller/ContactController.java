@@ -12,14 +12,20 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/contacts")
-@CrossOrigin(origins = "http://localhost:3000")   // React dev server
-//@RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:3001")  
+
 public class ContactController {
 
     private ContactService contactService;
 
     
-    @PostMapping
+    public ContactController(ContactService contactService) {
+		super();
+		this.contactService = contactService;
+	}
+
+
+	@PostMapping
     public ResponseEntity<Contact> create(@RequestBody Contact contact) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(contactService.createContact(contact));
