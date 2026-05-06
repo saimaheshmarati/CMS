@@ -16,7 +16,7 @@ import java.util.List;
 //@RequiredArgsConstructor
 public class ContactController {
 
-    private final ContactService contactService;
+    private ContactService contactService;
 
     
     @PostMapping
